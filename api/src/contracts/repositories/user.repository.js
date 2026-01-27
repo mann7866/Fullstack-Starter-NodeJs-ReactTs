@@ -1,29 +1,38 @@
-const db = require("../../config/database");
-const UserInterface = require("../interfaces/user.interface");
+const db = require('../../config/database');
+const UserInterface = require('../interfaces/user.interface');
+const UserModel = require('../../http/models/user.model');
 
 class UserRepository extends UserInterface {
   async all() {
-    return db("users").select("*");
+    return db(UserModel.table).select('*');
   }
 
   async find(id) {
-    return db("users").where("id", id).first();
+    return db(UserModel.table)
+      .where(UserModel.primaryKey, id)
+      .first();
   }
 
   async findByEmail(email) {
-    return db("users").where("email", email).first();
+    return db(UserModel.table)
+      .where('email', email)
+      .first();
   }
 
   async create(data) {
-    return db("users").insert(data);
+    return db(UserModel.table).insert(data);
   }
 
   async update(id, data) {
-    return db("users").where("id", id).update(data);
+    return db(UserModel.table)
+      .where(UserModel.primaryKey, id)
+      .update(data);
   }
 
   async delete(id) {
-    return db("users").where("id", id).del();
+    return db(UserModel.table)
+      .where(UserModel.primaryKey, id)
+      .del();
   }
 }
 
