@@ -1,0 +1,10 @@
+const BaseModel = require('./base.model');
+
+module.exports = new BaseModel({
+  table: 'your-table',
+  primaryKey: 'id',
+
+  relations: {
+    //
+  },
+});

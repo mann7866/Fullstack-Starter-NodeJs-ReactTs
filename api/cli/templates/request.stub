@@ -1,0 +1,22 @@
+const Joi = require('joi');
+const BaseRequest = require('./base.request');
+
+class {{name}}Request {
+  static create() {
+    return BaseRequest.validate(
+      Joi.object({
+        //
+      })
+    );
+  }
+
+  static update() {
+    return BaseRequest.validate(
+      Joi.object({
+        //
+      })
+    );
+  }
+}
+
+module.exports = {{name}}Request;

@@ -1,0 +1,15 @@
+class {{name}}Resource {
+  static single(data) {
+    if (!data) return null;
+
+    return {
+      id: data.id,
+    };
+  }
+
+  static collection(datas = []) {
+    return datas.map(data => this.single(data));
+  }
+}
+
+module.exports = {{name}}Resource;

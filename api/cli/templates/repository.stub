@@ -1,0 +1,26 @@
+const db = require('../../config/database');
+
+class {{name}}Repository {
+  async all() {
+    return [];
+  }
+
+  async find(id) {
+    return null;
+  }
+
+  async create(data) {
+    return null;
+  }
+
+   async update(id, data) {
+    return null;
+  }
+
+  async delete(id) {
+    return null;
+  }
+
+}
+
+module.exports = new {{name}}Repository();

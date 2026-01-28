@@ -1,0 +1,29 @@
+const db = require('../../config/database');
+
+const guardRepository = require('../guards/repo.guard');
+const rules = require('../guards/rules/{{name}}.rule');
+
+class {{name}}Repository {
+  async all() {
+    return [];
+  }
+
+  async find(id) {
+    return null;
+  }
+
+  async create(data) {
+    return null;
+  }
+
+   async update(id, data) {
+    return null;
+  }
+
+  async delete(id) {
+    return null;
+  }
+
+}
+
+module.exports = guardRepository(new {{name}}Repository(), rules);

@@ -1,0 +1,10 @@
+const router = require("express").Router();
+
+router.get("/new-route", function (req, res) {
+  return res.json({
+    message: "new route",
+  });
+});
+
+
+module.exports = router;

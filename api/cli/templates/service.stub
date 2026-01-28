@@ -1,0 +1,28 @@
+
+class  {{name}}Service {
+  constructor() {
+    //
+  }
+
+  async getAll() {
+    return null;
+  }
+
+  async getById(id) {
+    return null;
+  }
+
+  async create() {
+    return null;
+  }
+
+  async update(id, data) {
+    return null;
+  }
+
+  async delete(id) {
+    return null;
+  }
+}
+
+module.exports = new  {{name}}Service();
